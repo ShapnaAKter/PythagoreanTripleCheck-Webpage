@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pythagorean triples webpage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+ <integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+   <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+  </head>
+
+<body>
+
+<header>
+	
+
+<div class='logo'></div>
+
+<h1 class='logo-text'> <span> Phythagorian</span> Triples</h1>
+</div>
+
+</div>
+
+</header>
+
+
+
+
+<div class="main-content-wrapper">
+        <div class="main-content single">
+          <div class="post-content">
+            <p>A "Pythagorean Triple" is a set of positive integers, a, b and c that fits the rule:
+            </p>
+            <p class='formula'>a2 + b2 = c2</p>
+            <p><h2>List of the First Few</h2></p>
+
+              <div class="simple">
+        <table class="simple">
+          <tbody>
+<tr>
+            <td>(3, 4, 5)</td>
+            <td>(5, 12, 13)</td>
+            <td>(7, 24, 25)</td>
+            <td>(8, 15, 17)</td>
+          </tr>
+          <tr>
+            <td>(9, 40, 41)</td>
+            <td>(11, 60, 61)</td>
+            <td>(12, 35, 37)</td>
+            <td>(13, 84, 85)</td>
+          </tr>
+          <tr>
+            <td>(15,112,113)</td>
+            <td>(16, 63, 65)</td>
+            <td>(17,144,145)</td>
+            <td>(19,180,181)</td>
+          </tr>
+          <tr>
+            <td>(20, 21, 29)</td>
+            <td>(20, 99,101)</td>
+            <td>(21,220,221)</td>
+            <td>(23,264,265)</td>
+          </tr>
+          <tr>
+            <td>(24,143,145)</td>
+            <td>(25,312,313)</td>
+            <td>(27,364,365)</td>
+            <td>(28, 45, 53)</td>
+          </tr>
+          <tr>
+            <td>(28,195,197)</td>
+            <td>(29,420,421)</td>
+            <td>(31,480,481)</td>
+            <td>(32,255,257)</td>
+          </tr>
+          <tr>
+            <td>(33, 56, 65)</td>
+            <td>(33,544,545)</td>
+            <td>(35,612,613)</td>
+            <td>(36, 77, 85)</td>
+          </tr>
+          <tr>
+            <td>(36,323,325)</td>
+            <td>(37,684,685)</td>
+            <td colspan="2">... infinitely many more ...</td>
+          </tr>
+        </tbody></table>
+
+
+</div>
+</div>
+</div>
+
+      
+      <p class ='content'>Make sure to provide the appropriate input in which the value of a should be smaller than the value of c, and the range must be a=1 to c=20000
+      </p>
+          
+          </div>
+
+
+<div class = 'calculator'>
+<h1> Pythagorean triples Calculation</h1>
+
+
+<div class = 'main-calc' >
+
+Enter the value of a:
+
+<input type="text" id="a" placeholder="a"/></br>
+
+
+Enter the value of c:
+
+<input type="text" id="c" placeholder="c"/></br>
+
+submit:
+
+<input type="submit" class="sub"  onclick = "change()"/></br>
+
+
+
+square of a:
+<input type="text" id="a2" class ='a2' placeholder="a2"/></br>
+square of c:
+<input type="text" id="c2"  class = 'c2' placeholder="c2"/></br>
+
+Result of b:
+
+<input type="text" id="res" class ='res' placeholder = "result of b" ></br>
+
+check:
+
+<input type="text" id="result" class ='resul' placeholder = "check" ></br>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+<script>
+
+function change(){
+
+
+var a = document.getElementById('a').value;
+
+
+var c = document.getElementById('c').value;
+
+
+
+  if (a<=0 || a>=19999 || c<=1 || c>=20001) {
+    alert("Input range must be a=1 to c=20000");
+    return false;
+  }
+
+
+
+document.getElementById('a2').value = a*a;
+
+document.getElementById('c2').value = c*c;
+
+
+var a2 = a*a;
+
+var c2 = c*c;
+
+
+var b2 = (c2 - a2);
+
+var b = Math.sqrt(b2);
+
+
+
+document.getElementById('res').value = b;
+
+var sum = a2+(b*b);
+
+if(sum == c2 && b%2==0)
+{
+
+document.getElementById('result').value = " yes Pythagorean triples";
+
+
+
+}
+
+else
+
+{
+
+document.getElementById('result').value = "not Pythagorean triples";
+
+}
+
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h1 class="logo-text"><span>Phythagorian</span>Triples</h1>
+        <p>
+          Phythagorian Triples is a mathematical blog conceived for the purpose of a assignment.
+          However, the blogger has a website called shapnaswebsite.com where she writes her interests of projects .
+        </p>
+        <div class="contact">
+          <span><i class="fas fa-phone"></i> &nbsp; +8801790407879</span>
+          <span><i class="fas fa-envelope"></i> &nbsp; jannatul.shapna99@gmail.com</span>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Events</li>
+          </a>
+          <a href="#">
+            <li>Team</li>
+          </a>
+            <a href="#">
+            <li>Terms and Conditions</li>
+          </a>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Contact us</h2>
+        <br>
+        <form action="index.html" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+          <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+          <button type="submit" class="btn btn-big contact-btn">
+            <i class="fas fa-envelope"></i>
+            Send
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; dreamishcoding.com | Designed by Shapna Akter
+    </div>
+  </div>
+
+
+
+</body>
+
+
+
+
+</html>
